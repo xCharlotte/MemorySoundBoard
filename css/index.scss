@@ -50,8 +50,11 @@ html {
   align-items: center;
   width: 100%;
   height: 15rem; 
-  background-size: cover; // Maakt de afbeelding net iets grooter dan het element zodat je geen witte randjes krijgt.
+  // background-size: cover; // Maakt de afbeelding net iets grooter dan het element zodat je geen witte randjes krijgt.
   background-repeat: no-repeat; 
+  transition: all 0.3s ease-in-out; // Wordt gebruik voor het inzoomen op de afbeelding
+  background-size: 110%; //maakt de afbeelding iets groter zodat bepaalde list elements niet groter zijn dan de rest
+  background-position: center;
   color: #ffff;
   font-size: 1.8rem;
   text-align: center;
@@ -61,6 +64,7 @@ html {
 
 .soundboard-item:hover {
   -webkit-filter: none;
+  background-size: 120%; // Maakt de afbeelding 10% groter voor het inzoomen op hover effect
 }
 
 footer {
@@ -74,10 +78,26 @@ footer {
     width: 70%;
   }
   
+  .soundboard-item {
+    background-size: cover;
+    transition: all 0.0s ease-in-out;
+  }
+  
   li {
     margin: 20px auto;
   }
 }
+
+@media (max-width: 1062px) {
+  .soundboard-group {
+    display: block;
+    width: 60%;
+  }
+  li {
+    margin: 20px auto;
+  }
+}
+
 
 
 
